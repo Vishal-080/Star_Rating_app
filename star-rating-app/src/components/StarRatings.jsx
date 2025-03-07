@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const StarRatings = () => {
+const StarRatings = ({totalStars = 5}) => {
+
+
   return (
-    <div>StarRatings</div>
+    <div>StarRatings ★</div>
   )
 }
 
