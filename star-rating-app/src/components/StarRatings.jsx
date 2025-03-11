@@ -7,7 +7,7 @@ const StarRatings = ({ totalStars = 5 }) => {
     <div className="container flex justify-center items-center">
       <div>⭐⭐</div>
       <p className="text-center">
-        Rating is: {rating}/{totalStars}
+        Rating is:- {rating}/{totalStars}
       </p>
     </div>
   );
