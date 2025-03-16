@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const StarRatings = ({ totalStars = 5 }) => {
   const [rating, setRating] = useState(0);
-  const [hover,setHover] = useState(0);
+  const [hover, setHover] = useState(0);
 
   return (
     <div className="container flex justify-center items-center">
