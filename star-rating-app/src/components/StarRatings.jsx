@@ -7,7 +7,7 @@ const StarRatings = ({ totalStars = 5 }) => {
   return (
     <div className="container flex justify-center items-center">
       <h2 className="font-bold text-2xl">Star Rating Feature</h2>
-      <div>⭐⭐⭐⭐⭐⭐</div>
+      {/* <div>⭐⭐⭐⭐⭐⭐</div> */}
       <div className="stars">
         {[...Array(totalStars)].map((_, index) => (
           <span
