@@ -5,7 +5,7 @@ const StarRatings = ({ totalStars = 5 }) => {
   const [hover, setHover] = useState(0);
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center my-4">
       <h2 className="font-bold text-2xl">Star Rating Feature</h2>
       <div className="stars">
         {[...Array(totalStars)].map((_, index) => (
