@@ -4,7 +4,7 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   const handleAddCount = () => {
-    
+    setCount(count+1);
   }
 
   return (
@@ -12,7 +12,7 @@ const Counter = () => {
       <h1 className="font-medium text-xl">Counter App</h1>
       <p>{count}</p>
       <div className="my-4">
-        <button className="border p-2 rounded-lg mx-2 cursor-pointer">
+        <button className="border p-2 rounded-lg mx-2 cursor-pointer" onClick={handleAddCount}>
           Add ➕
         </button>
         <button className="border p-2 rounded-lg mx-2 cursor-pointer">
