@@ -3,6 +3,10 @@ import React, { useState } from "react";
 const Counter = () => {
   const [count, setCount] = useState(0);
 
+  const handleAddCount = () => {
+    
+  }
+
   return (
     <div className="border border-amber-300 w-6/12 m-auto text-center my-8">
       <h1 className="font-medium text-xl">Counter App</h1>
