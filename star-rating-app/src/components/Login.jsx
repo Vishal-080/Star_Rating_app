@@ -2,8 +2,8 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div className="text-center bg-lime-300 w-6/12 m-auto">
-      <fieldset className="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+    <div className="text-center border-blue-500 border w-6/12 m-auto">
+      <fieldset className="fieldset w-xs bg-base-100 border border-blue-300 p-4 rounded-box m-auto">
         <legend className="fieldset-legend">Login</legend>
 
         <label className="fieldset-label">Email</label>
