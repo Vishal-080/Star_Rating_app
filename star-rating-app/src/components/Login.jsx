@@ -18,7 +18,7 @@ const Login = () => {
             type="email"
             className="input"
             placeholder="Email"
-            {...register("email")}
+            {...register("email", { required: true })}
           />
 
           <label className="fieldset-label">Password</label>
@@ -26,7 +26,7 @@ const Login = () => {
             type="password"
             className="input"
             placeholder="Password"
-            {...register("password")}
+            {...register("password", { required: true, minLength: 6, maxLength: 20 })}
           />
 
           <button className="btn btn-neutral mt-4" type="submit">
