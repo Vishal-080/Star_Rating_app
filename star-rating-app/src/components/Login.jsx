@@ -26,7 +26,11 @@ const Login = () => {
             type="password"
             className="input"
             placeholder="Password"
-            {...register("password", { required: true, minLength: 6, maxLength: 20 })}
+            {...register("password", {
+              required: true,
+              minLength: 6,
+              maxLength: 20,
+            })}
           />
 
           <button className="btn btn-neutral mt-4" type="submit">
