@@ -31,7 +31,6 @@ const Login = () => {
               maxLength: 20,
             })}
           />
-
           <button className="btn btn-neutral mt-4" type="submit">
             Login
           </button>
