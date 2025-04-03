@@ -20,7 +20,6 @@ const Login = () => {
             placeholder="Email"
             {...register("email", { required: true })}
           />
-
           <label className="fieldset-label">Password</label>
           <input
             type="password"
