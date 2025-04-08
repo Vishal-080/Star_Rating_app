@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 
 const Todo = () => {
@@ -10,9 +11,24 @@ const Todo = () => {
   };
 
   const handleAddTodo = () => {
-    setTodoList([...todoList, todo]);
-    setTodo("");
+    if(todo !== ""){
+      setTodoList([...todoList, todo]);
+      setTodo("");
+    }
   };
+
+  useEffect(()=>{
+    let timer = setTimeout(() => {
+      if(todo !== ""){
+        console.log("hello from setTimeout");
+      }
+    }, 4000);
+
+    return ()=>{
+      clearTimeout(timer);
+    }
+
+  },[todo]);
 
   return (
     <div className="bg-fuchsia-300 w-6/12 my-8 mx-auto border-2 border-fuchsia-600 text-black text-center p-4 font-mono">
