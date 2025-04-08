@@ -17,7 +17,7 @@ function App() {
         <Login />
       </Suspense>
       <Suspense
-        fallback="Todo App Loading...!"
+        fallback="Todo App Loading...! "
         className="text-2xl text-center font-bold"
       >
         <Todo />
