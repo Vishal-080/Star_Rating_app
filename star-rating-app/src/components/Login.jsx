@@ -16,14 +16,14 @@ const Login = () => {
           <label className="fieldset-label">Email</label>
           <input
             type="email"
-            className="input"
+            className="input outline-none!"
             placeholder="Email"
             {...register("email", { required: true })}
           />
           <label className="fieldset-label">Password</label>
           <input
             type="password"
-            className="input"
+            className="input outline-none!"
             placeholder="Password"
             {...register("password", {
               required: true,
