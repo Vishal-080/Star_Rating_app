@@ -27,7 +27,7 @@ const Login = () => {
             placeholder="Password"
             {...register("password", {
               required: true,
-              minLength: 6,
+              minLength: 8,
               maxLength: 20,
             })}
           />
