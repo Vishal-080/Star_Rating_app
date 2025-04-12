@@ -45,9 +45,9 @@ const Timer = () => {
         </h3>
       </div>
       <div>
-        <button className="px-4 py-2 rounded-2xl bg-cyan-300 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer hover:bg-cyan-200 active:bg-cyan-600 active:text-white">
+        {/* <button className="px-4 py-2 rounded-2xl bg-cyan-300 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer hover:bg-cyan-200 active:bg-cyan-600 active:text-white">
           Start
-        </button>
+        </button> */}
 
         <button
           className="px-4 py-2 rounded-2xl bg-cyan-300 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer hover:bg-cyan-200 active:bg-cyan-600 active:text-white"
