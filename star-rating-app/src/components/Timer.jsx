@@ -16,24 +16,23 @@ const Timer = () => {
     setMin(0);
     setHr(0);
   };
-let timer = null;
+  let timer = null;
 
-  useEffect(()=>{
+  useEffect(() => {
     timer = setInterval(() => {
-      setSec(sec+1);
-      if(sec == 59) {
-        setMin(min+1);
+      setSec(sec + 1);
+      if (sec == 59) {
+        setMin(min + 1);
         setSec(0);
       }
-      if(min == 59){
-        setHr(hr+1);
+      if (min == 59) {
+        setHr(hr + 1);
         setMin(0);
         setSec(0);
       }
     }, 1000);
 
-    return ()=> clearInterval(timer);
-
+    return () => clearInterval(timer);
   });
 
   return (
@@ -41,13 +40,12 @@ let timer = null;
       <div>
         <h1>Timer</h1>
         <h3>
-          {hr<10 ? "0"+hr : hr} : {min<10 ? "0"+min : min} : {sec<10? "0"+sec : sec}
+          {hr < 10 ? "0" + hr : hr} : {min < 10 ? "0" + min : min} :{" "}
+          {sec < 10 ? "0" + sec : sec}
         </h3>
       </div>
       <div>
-        <button
-          className="px-4 py-2 rounded-2xl bg-cyan-300 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer hover:bg-cyan-200 active:bg-cyan-600 active:text-white"
-        >
+        <button className="px-4 py-2 rounded-2xl bg-cyan-300 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer hover:bg-cyan-200 active:bg-cyan-600 active:text-white">
           Start
         </button>
 
