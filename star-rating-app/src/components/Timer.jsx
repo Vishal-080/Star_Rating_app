@@ -8,16 +8,23 @@ const Timer = () => {
   const [sec, setSec] = useState(10);
 
 
+  const handleReset = () => {
+    console.log("handleReset");
+  }
+
+  const handleStop = () => {
+    console.log("handleStop");
+  }
 
   return (
-    <div>
+    <div className="w-6/12 mx-auto my-8 border text-center">
       <div>
         <h1>Timer</h1>
-        <h3>{hr} : {min} :{sec}</h3>
+        <h3 >{hr} : {min} :{sec}</h3>
       </div>
       <div>
-        <button>Reset</button>
-        <button>Stop</button>
+        <button className="px-4 py-2 rounded-2xl bg-cyan-400 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer" onClick={handleReset}>Reset</button>
+        <button className="px-4 py-2 rounded-2xl bg-cyan-400 text-black  border-cyan-600 border-2 text-xl m-4 cursor-pointer" onClick={handleStop}>Stop</button>
       </div>
     </div>
   );
