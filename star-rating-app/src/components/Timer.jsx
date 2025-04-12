@@ -30,7 +30,7 @@ let timer = null;
         setMin(0);
         setSec(0);
       }
-    }, 500);
+    }, 1000);
 
     return ()=> clearInterval(timer);
 
