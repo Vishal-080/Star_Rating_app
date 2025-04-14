@@ -1,10 +1,23 @@
 import React from "react";
 import { useState } from "react";
+import { set } from "react-hook-form";
 
 const Calculator = () => {
   const [data, setData] = useState("");
   const handleBtnClick = (e) => {
     setData(data.concat(e.target.value));
+  };
+
+  const handleEqual = () => {
+    setData(eval(data).toString());
+  };
+
+  const handleBack = () => {
+    setData(data.slice(0, -1));
+  };
+
+  const handleClear = () => {
+    setData("");
   };
 
   return (
@@ -43,8 +56,7 @@ const Calculator = () => {
           </button>
           <button
             className="cursor-pointer text-center w-1/5 m-2 p-2 text-xl font-bold border rounded-lg hover:bg-emerald-300 hover:text-black hover:border-none"
-            onClick={handleBtnClick}
-            value="AC"
+            onClick={handleClear}
           >
             AC
           </button>
@@ -145,15 +157,13 @@ const Calculator = () => {
           </button>
           <button
             className="cursor-pointer text-center w-1/5 m-2 p-2 text-xl font-bold border rounded-lg hover:bg-emerald-300 hover:text-black hover:border-none"
-            onClick={handleBtnClick}
-            value="Back"
+            onClick={handleBack}
           >
             Back
           </button>
           <button
             className="cursor-pointer text-center w-1/5 m-2 p-2 text-xl font-bold border rounded-lg hover:bg-emerald-300 hover:text-black hover:border-none"
-            onClick={handleBtnClick}
-            value="="
+            onClick={handleEqual}
           >
             =
           </button>
