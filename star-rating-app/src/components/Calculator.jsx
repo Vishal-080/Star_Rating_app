@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { set } from "react-hook-form";
 
 const Calculator = () => {
   const [data, setData] = useState("");
