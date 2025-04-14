@@ -6,6 +6,7 @@ function App() {
   const Login = lazy(() => import("./components/Login"));
   const Todo = lazy(() => import("./components/Todo"));
   const Timer = lazy(() => import("./components/Timer"));
+  const Calculator = lazy(()=> import("./components/Calculator"));
 
   return (
     <>
@@ -28,6 +29,12 @@ function App() {
         className="text-2xl text-center font-bold"
       >
         <Timer />
+      </Suspense>
+      <Suspense
+        fallback="Timer App Loading...! "
+        className="text-2xl text-center font-bold"
+      >
+        <Calculator />
       </Suspense>
     </>
   );
