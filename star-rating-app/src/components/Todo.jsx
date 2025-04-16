@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from 'react-toastify';
+import { AiFillDelete } from "react-icons/ai";
 
 
 const Todo = () => {
@@ -19,6 +20,12 @@ const Todo = () => {
       toast("Task Added to Todo List !")
     }
   };
+
+  const handleDelete = (index) => {
+    let filter = todoList.filter((item,id) => id!==index);
+    setTodoList(filter);
+    toast.error("Task Deleted Successfully");
+  }
 
   useEffect(()=>{
     let timer = setTimeout(() => {
@@ -51,10 +58,12 @@ const Todo = () => {
       </button>
       <div className="w-6/12 m-auto p-2 text-left">
         {todoList.map((item, index) => (
-          <h1 key={index}>
-            <span>{index + 1}. </span>
-            {item}
-          </h1>
+          <div key={index} className="p-2 flex justify-between items-center border text-center">
+            <div>
+              <p>{index+1}{"."}{item}</p>
+            </div>
+            <div className="cursor-pointer" onClick={()=>handleDelete(index)}><AiFillDelete/></div>
+          </div>
         ))}
       </div>
     </div>
