@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { toast } from 'react-toastify';
+
 
 const Todo = () => {
   const [todoList, setTodoList] = useState([]);
@@ -14,6 +16,7 @@ const Todo = () => {
     if(todo !== ""){
       setTodoList([...todoList, todo]);
       setTodo("");
+      toast("Task Added to Todo List !")
     }
   };
 
