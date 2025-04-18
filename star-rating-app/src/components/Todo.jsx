@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { AiFillDelete } from "react-icons/ai";
-
 
 const Todo = () => {
   const [todoList, setTodoList] = useState([]);
@@ -14,31 +13,30 @@ const Todo = () => {
   };
 
   const handleAddTodo = () => {
-    if(todo !== ""){
+    if (todo !== "") {
       setTodoList([...todoList, todo]);
       setTodo("");
-      toast("Task Added to Todo List !")
+      toast("Task Added to Todo List !");
     }
   };
 
   const handleDelete = (index) => {
-    let filter = todoList.filter((item,id) => id!==index);
+    let filter = todoList.filter((item, id) => id !== index);
     setTodoList(filter);
     toast.error("Task Deleted Successfully");
-  }
+  };
 
-  useEffect(()=>{
+  useEffect(() => {
     let timer = setTimeout(() => {
-      if(todo !== ""){
+      if (todo !== "") {
         console.log("hello from setTimeout");
       }
     }, 4000);
 
-    return ()=>{
+    return () => {
       clearTimeout(timer);
-    }
-
-  },[todo]);
+    };
+  }, [todo]);
 
   return (
     <div className="bg-fuchsia-300 w-6/12 my-8 mx-auto border-2 border-fuchsia-600 text-black text-center p-4 font-mono">
@@ -58,11 +56,20 @@ const Todo = () => {
       </button>
       <div className="w-6/12 m-auto p-2 text-left">
         {todoList.map((item, index) => (
-          <div key={index} className="p-2 flex justify-between items-center border text-center">
+          <div
+            key={index}
+            className="p-2 flex justify-between items-center border text-center"
+          >
             <div>
-              <p>{index+1}{"."}{item}</p>
+              <p>
+                {index + 1}
+                {"."}
+                {item}
+              </p>
             </div>
-            <div className="cursor-pointer" onClick={()=>handleDelete(index)}><AiFillDelete/></div>
+            <div className="cursor-pointer" onClick={() => handleDelete(index)}>
+              <AiFillDelete />
+            </div>
           </div>
         ))}
       </div>
