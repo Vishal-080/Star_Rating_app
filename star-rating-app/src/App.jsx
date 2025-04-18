@@ -6,7 +6,7 @@ function App() {
   const Login = lazy(() => import("./components/Login"));
   const Todo = lazy(() => import("./components/Todo"));
   const Timer = lazy(() => import("./components/Timer"));
-  const Calculator = lazy(()=> import("./components/Calculator"));
+  const Calculator = lazy(() => import("./components/Calculator"));
 
   return (
     <>
